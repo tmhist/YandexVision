@@ -1,0 +1,9 @@
+export IAM_TOKEN=<IAM_token>
+curl -X POST \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer ${IAM_TOKEN}" \
+    -H "x-folder-id: <catalog ID>" \
+    -H "x-data-logging-enabled: true" \
+    -d "@body.json" \
+    https://ocr.api.cloud.yandex.net/ocr/v1/recognizeText \
+    -o output.json
